@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Neural Decoding - Hwayoung</title>
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../../static/css/styles.css?ver=2" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <STYLE>
+        A {
+            text-decoration: none;
+            color: black;
+        }
+    </STYLE>
+    <!-- Navigation-->
+    <div class="sidenav">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
+            style="width: 350px; height: 100%; position:fixed; z-index:1; top:0; left:0;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">Neural Decoding</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto" id="sidebar">
+                <li class="nav-item"><a href="#summary" class="nav-link text-white">Summary</a></li>
+                <li class="nav-item"><a href="#intro" class="nav-link text-white">Introduction</a></li>
+                <li class="nav-item"><a href="#method" class="nav-link text-white">Method</a></li>
+                <li class="nav-item"><a href="#result" class="nav-link text-white">Result</a></li>
+                <li class="nav-item"><a href="#conclusion" class="nav-link text-white">Conclusion</a></li>
+
+            </ul>
+            <hr>
+            <div class="nav-link text-white">
+                <a href="/jobs/home" style="color: white;">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <!-- summary -->
+    <div class="project-detail">
+
+        <section class="page-section" id="summary" style="border-bottom: 3px solid #bbb;">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-black mt-0 text-center">SUMMARY</h2>
+                <hr class="divider" />
+
+                <div class="row info-row1">
+                    <div class="project-title col-lg-5">
+                        <span class="project-cat">Data Analysis</span>
+                        <h1 class="lg-heading">Neural Decoding</h1>
+                    </div>
+                    <div class="project-overview col-lg-4">
+                        <span class="sm-heading">Project Overview</span>
+                        <p class="content">This project not only investigate the relationship between single and
+                            multi-finger movements by analyzing the firing pattern of neurons, but also build a decdoing
+                            model for inferring multi-finger movements using only single finger movements.</p>
+                    </div>
+                </div>
+                <div class="row info-row2">
+                    <div class="info-detail detail1 col-lg-3 col-sm-12">
+                        <span class="sm-heading">Timeline</span>
+                        <span class="content">2018</span>
+                    </div>
+                    <div class="info-detail detail2 col-lg-3 col-sm-12">
+                        <span class="sm-heading">Role</span>
+                        <span class="content">Build unsupervised neural-activation models</span>
+                    </div>
+                    <div class="info-detail detail3 col-lg-3 col-sm-12">
+                        <span class="sm-heading">Tools</span>
+                        <span class="content">MATLAB</span>
+                    </div>
+                    <div class="info-detail detail3 col-lg-3 col-sm-12">
+                        <span class="sm-heading">More Information</span>
+                        <span class="content">paper <a href="https://ieeexplore.ieee.org/document/8490677"><i
+                                    class="fas fa-file" style="font-size: 20px;"></i></a><br>github <a
+                                href="https://github.com/hy2207/NeuralDecoding"><i class="fab fa-github"
+                                    style="font-size: 20px;"></i></a> </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Intro-->
+        <section class="page-section" id="intro" style="border-bottom: 3px solid #bbb;">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <h2 class="text-black mt-0 text-center">Introduction</h2>
+                    <hr class="divider" />
+                    <div class="detail_head">What is a Neural Decoding?</div>
+                    <div class="detail_body">
+                        <img class="detail_img" src="{% static 'img/ns_intro.png' %}"></img>
+                        <li>Neurons encode information in the form of an electrical signal (e.g. spike train)</li>
+                        <li>Inferring information about motion/ sensory signal in the spike train is called neural
+                            decoding</li>
+                        <br>
+                        <p class="text-center">Focused on <b>motion decoding</b>, especially <ins>decoding finger</ins>
+                            developingfor safe and convenient life</p>
+                    </div>
+                    <div class="detail_head">Proposed Decoding</div>
+                    <div class="detail_body">
+                        <img class="detail_img" src="{% static 'img/ns_intro_decoding.png' %}"></img>
+
+                        <p class="text-left">To estimate multi-finger movements,</p>
+                        <li>Conventional decoding: necessary to model various finger combinations</li>
+                        <li>Proposed decoding: Estimate multi-finger movements requiring <b>only single finger
+                                movements</b> data</li>
+                    </div>
+                    <div class="detail_head">Experimental Protocol</div>
+                    <div class="detail_body">
+                        <li>Subject: Two macaca mulatta monkey training to perform visually cued individuated finger
+                            movements</li>
+                        <li>Recording area: Task-related neurons in primary motor cortex; M1</li>
+                        <li>Movements:</li>
+                        <ul>
+                            <ul>
+                                <li>Monkey K: 10 single movements & 6 multi-finger movements</li>
+                                <li>Monkey S: 10 single movements & 2 multi-finger movements</li>
+                            </ul>
+                        </ul>
+                        <li>Number of trials: 6</li>
+                        <figure>
+                            <img class="detail_img" src="{% static 'img/ns_intro_data.png' %}"></img>
+                            <figcaption class="text-right" style="font-size: 9px;">Refer to:
+                                H.-C.Shin,V.Aggarwal,S.Acharya,M.H.Schieber,andN.V.Thakor, “Neural decoding of finger
+                                movements using skellam-based maximum- likelihood decoding,” IEEE Transactions on
+                                Biomedical Engineering, vol. 57, no. 3, pp. 754–760, 2010.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Method -->
+        <section class="page-section" id="method" style="border-bottom: 3px solid #bbb;">
+            <div class="container-fluid p-0">
+                <div class="container px-4 px-lg-5">
+                    <h2 class="mt-0 text-center">Method</h2>
+                    <hr class="divider" />
+                    <div class="detail_head">Perievent time histogram (PETH)</div>
+                    <div class="detail_body">
+                        <li>Using PETH to identify neural activity in each motions</li>
+                        <figure>
+                            <img class="detail_img" src="{% static 'img/ns_intro_data2.png' %}"></img>
+                            <figcaption style="font-size: 9px; text-align: right;">number: # of fingers; f: flextion;
+                                e:extension; K: monkey
+                                K; number: neuron number</figcaption>
+                        </figure>
+                        <p class="text-center">"The neurons responsive to single finger movements are also participating
+                            in <b>corresponding multi-finger movements</b>"</p>
+                    </div>
+                    <div class="detail_head">Pearson's correlation coeffiecient</div>
+
+                    <div class="row info-row2">
+                        <img class="col-lg-6" src="{% static 'img/ns_result_cor.png' %}"></img>
+
+                        <div class="col-lg-6 detail_body">
+                            <br><br>
+                            <li>Using Pearson's correlation coeffiecient</li>
+                            <figure>
+                                <img src="{% static 'img/ns_method_cc.png' %}"
+                                    style="width: 70%; display: block; margin: 20px;"></img>
+                                <figcaption style="font-size: 9px;">k,l: movement number; t: time domain</figcaption>
+                            </figure>
+                            <li>Each circle represents the correlation, the size of circle is proportional to the
+                                correlation coefficient</li>
+                            <li>Left figure shows the neuron-averaged correlation from the 10 high-responding neuron
+                                group</li>
+                            <li>Showing the physically related single and combined-finger pairs, the
+                                correlation-coefficient values are high</li>
+                        </div>
+
+                    </div>
+
+                    <div class="detail_head">Maximum Likelihood(ML)</div>
+                    <div class="detail_body">
+                        <li>Using to estimate the intended movement</li>
+                        <li>ML Flow Chart</li>
+                        <figure>
+                            <img class="detail_img" src="{% static 'img/ns_method_ml.png' %}"></img>
+                            <figcaption style="font-size: 10px; text-align: right;">n: neuron #; m: movement #
+                            </figcaption>
+                        </figure>
+                        <li>Using skellam distribution for probablistic model of neural activation</li>
+                        <figure>
+                            <img class="detail_img" src="{% static 'img/ns_method_skellam.png' %}"
+                                style="width: 50%;"></img>
+                            <figcaption style="font-size: 10px;">I_x(z): modified Bessel function of
+                                the first kind</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="detail_head">Proposed Decoding model</div>
+                    <div class="detail_body">
+                        <li>Estimating the multi-finger models using the neural activity obtained when the corresponding
+                            single finger movements are performed</li>
+                        <li>Proposed method</li>
+                        <figure>
+                            <img class="detail_img" src="{% static 'img/ns_method_nbinder.png' %}"
+                                style="width: 50%;"></img>
+                            <figcaption style="font-size: 10px;">m_1, m_2: different single finger
+                                movement; m_(1+2): multi-finger movement; E_k: energy consumption in m_k</figcaption>
+                        </figure>
+                        <li>Assume that the energy consumed by neurons is constant when performing any motions</li>
+                        <li>The energy consumed in the multi-finger movement can be the average of energy consumed in
+                            performing the single finger movements</li>
+                        <li>The estimated variance is also calculated in a similar manner with this equation</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result -->
+        <section class="page-section" id="result" style="border-bottom: 3px solid #bbb;">
+            <div class="container-fluid p-0">
+                <div class="container px-4 px-lg-5">
+                    <h2 class="mt-0 text-center">Result</h2>
+                    <hr class="divider" />
+                    <div class="detail_head">Estimated models</div>
+                    <div class="row info-row2">
+                        <img class="col-lg-6" src="{% static 'img/ns_result_model.png' %}"></img>
+                        <div class="col-lg-6 detail_body">
+                            <br><br>
+                            <li>Comparison of actual model (line) and estimated model(line with marker)</li>
+                            <li>Showing the model where the skellam distribution was used for the two movements in 3
+                                neurons</li>
+                            <li>For the neurons K13300 and K30803 the estimated models are close to the actual models,
+                                especially in K13300, and the estimation results are not as satisfactory for neurons
+                                such as K14801.</li>
+                        </div>
+                    </div>
+                    <div class="detail_head">Decoding performance</div>
+                    <div class="detail_body">
+                        <img src="{% static 'img/ns_result.png' %}"></img>
+                        <li>Average decoding accuracies for the six movements of the monkey K (Left)</li>
+                        <li>nBINDER(proposed decoding method) accuracies for the six movements using the skellam
+                            distribution (Right)</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="page-section" id="conclusion" style="border-bottom: 3px solid #bbb;">
+            <div class="container-fluid p-0">
+                <div class="container px-4 px-lg-5">
+                    <h2 class="mt-0 text-center">Conclusion</h2>
+                    <hr class="divider" />
+
+                    <div class="detail_head">Decoding performance</div>
+                    <div class="detail_body">
+                        <li>Quantifying the neurological correlations between single finger movements and their combined
+                            movements</li>
+                        <li>Propose the novel neural decoding which can discriminate multi-finger movements based on
+                            independent and elementary finger movements</li>
+                        <li>So, prosthetic hand users can expect to skip the boring training process of multi-finger
+                            movements</li>
+                    </div>
+
+                    <div class="detail_head">Limitation</div>
+                    <div class="detail_body">
+                        <li>Unless assuming constant energy is consumed by the neurons to estimate probability model,
+                            the evidence of this assumption has not been produced.</li>
+                        <li>Verification in more various combinations of multi-finger movements is needed</li>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <footer class="page-section bg-dark">
+        <div class="container-fluid p-0">
+            <div class="container px-4 px-lg-5" style="margin-left: 500px;">
+                <h2 class="mt-0 text-center text-white">More information</h2>
+                <hr class="divider divider-light" />
+                <p class="text-center text-white">I wrote a thesis on this topic. More information can be found in the
+                    paper. <a href="https://ieeexplore.ieee.org/document/8490677"><i class="fas fa-file"
+                            style="font-size: 20px; color: white;"></i></a>
+                    <br>Also can check a part of the MATLAB code on my github <a
+                        href="https://github.com/hy2207/NeuralDecoding"><i class="fab fa-github"
+                            style="font-size: 20px; color: white;"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../../static/js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+
+</body>
+
+</html>
