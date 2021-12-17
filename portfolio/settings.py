@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-f08elx*yf4=$+_jgk0udh^rk7_a8$x9i&1qp6131d5ntdwx8o7
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "ec2-35-183-179-1.ca-central-1.compute.amazonaws.com"
+    "localhost",
+    "ec2-35-183-179-1.ca-central-1.compute.amazonaws.com",
 ]
 
 
@@ -127,7 +128,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = BASE_DIR
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
