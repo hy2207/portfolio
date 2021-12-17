@@ -29,6 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "ec2-35-183-179-1.ca-central-1.compute.amazonaws.com",
+    "www.hwayoungchoi.com",
+    ".hwayoungchoi.com",
+    ".www.hwayounghoi.com",
 ]
 
 
