@@ -88,24 +88,86 @@
                 <!-- <div class="album py-5 bg-light"> -->
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    {% for job in jobs.all %}
 
                     <div class="col-md-8" style="display: block; margin: auto; margin-top: 10px;">
                         <div
                             class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col p-4 d-flex flex-column position-static">
-                                <h3 class="mb-0 text-primary">{{ job.title }}</h3>
-                                <div class="mb-1 text-muted">{{ job.year }}</div>
+                                <h3 class="mb-0 text-primary">Board game App</h3>
+                                <div class="mb-1 text-muted">2021</div>
                                 <br />
-                                <p class="card-text mb-auto">{{ job.summary }}</p>
-                                <a href="{% url 'detail' job.title %}" class="stretched-link">More detail</a>
+                                <p class="card-text mb-auto">Players can play the 'Tug of Logic' game online, which allows them to share opinions on a main claim</p>
+                                <a href="{% url 'detail' 'Board game App' %}" class="stretched-link">More detail</a>
                             </div>
                             <div class="col-auto d-none d-lg-block">
-                                <img lass="bd-placeholder-img" width="300" height="250" src="{{ job.image.url }}"></img>
+                                <img lass="bd-placeholder-img" width="300" height="250" src="{% static 'img/tol_cover.png' %}"></img>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
+
+                    <div class="col-md-8" style="display: block; margin: auto; margin-top: 10px;">
+                        <div
+                            class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <h3 class="mb-0 text-primary">PTA</h3>
+                                <div class="mb-1 text-muted">2019</div>
+                                <br />
+                                <p class="card-text mb-auto">Building ML models to analyze personality traits using user's text messages</p>
+                                <a href="{% url 'detail' 'PTA' %}" class="stretched-link">More detail</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img lass="bd-placeholder-img" width="300" height="250" src="{% static 'img/base_cover.png' %}"></img>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8" style="display: block; margin: auto; margin-top: 10px;">
+                        <div
+                            class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <h3 class="mb-0 text-primary">Car rental App</h3>
+                                <div class="mb-1 text-muted">2019</div>
+                                <br />
+                                <p class="card-text mb-auto">It is inspired by Turo App, which is a car rental/selling app. It allows users to both rent or buy an available car as well as allows them to rent out or sell their own car.</p>
+                                <a href="{% url 'detail' 'car rental app' %}" class="stretched-link">More detail</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img lass="bd-placeholder-img" width="300" height="250" src="{% static 'img/mobile_cover.png' %}"></img>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8" style="display: block; margin: auto; margin-top: 10px;">
+                        <div
+                            class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <h3 class="mb-0 text-primary">Neural decoding</h3>
+                                <div class="mb-1 text-muted">2018</div>
+                                <br />
+                                <p class="card-text mb-auto">Investigate the relationship between single and multi-finger movements & Estimate multi-finger movements with only single-finger movements data</p>
+                                <a href="{% url 'detail' 'neural decoding' %}" class="stretched-link">More detail</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img lass="bd-placeholder-img" width="300" height="250" src="{% static 'img/decoding.png' %}"></img>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8" style="display: block; margin: auto; margin-top: 10px;">
+                        <div
+                            class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <h3 class="mb-0 text-primary">EMG decoding</h3>
+                                <div class="mb-1 text-muted">2016</div>
+                                <br />
+                                <p class="card-text mb-auto">Analyze amputee patient's EMG signal and implement  algorithm to precisely control the robotic arm</p>
+                                <a href="{% url 'detail' 'emg decoding' %}" class="stretched-link">More detail</a>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <img lass="bd-placeholder-img" width="300" height="250" src="{% static 'img/emg.png' %}"></img>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- </div> -->
