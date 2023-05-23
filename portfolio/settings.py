@@ -29,8 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "ec2-13-209-72-164.ap-northeast-2.compute.amazonaws.com"
-#     "www.hwayoungchoi.com",
-#     ".hwayoungchoi.com",
+    "www.hwayoungchoi.com",
+    ".hwayoungchoi.com",
 #     ".www.hwayounghoi.com",
 ]
 
