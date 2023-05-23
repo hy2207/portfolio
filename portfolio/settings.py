@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-f08elx*yf4=$+_jgk0udh^rk7_a8$x9i&1qp6131d5ntdwx8o7
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost"
-#     "ec2-15-164-215-134.ap-northeast-2.compute.amazonaws.com",
+    "localhost",
+    "ec2-13-209-72-164.ap-northeast-2.compute.amazonaws.com"
 #     "www.hwayoungchoi.com",
 #     ".hwayoungchoi.com",
 #     ".www.hwayounghoi.com",
